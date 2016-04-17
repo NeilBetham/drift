@@ -1,5 +1,9 @@
-require "drift/version"
+require 'drift/version'
+require 'drift/handbrake'
+require 'drift/media'
 
 module Drift
-  # Your code goes here...
+  def self.new(path, options = {})
+    Media.new path, options
+  end
 end
